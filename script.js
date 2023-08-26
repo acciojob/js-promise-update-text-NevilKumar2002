@@ -1,5 +1,13 @@
 //your JS code here. If required.
 const output=document.getElementById("output");
-let promise=new Promise(()=>{
-	output.innerText="Hello, world!";
-})
+async function sayhello() 
+{
+    return new Promise((resolve,reject)=>
+    {
+       setTimeout(()=>{
+       output.innerText="Hello, world!"
+       },1000)
+    })
+    
+}
+sayhello();
